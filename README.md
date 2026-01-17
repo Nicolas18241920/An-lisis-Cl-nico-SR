@@ -1,1 +1,0 @@
-# An-lisis-Cl-nico-SR
