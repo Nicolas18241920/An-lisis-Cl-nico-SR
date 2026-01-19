@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Cerrar menú al hacer click en un link
-    document.querySelectorAll('.nav-menu a').forEach(link => {
+    document.querySelectorAll('. nav-menu a').forEach(link => {
         link.addEventListener('click', () => {
             navMenu.classList.remove('active');
         });
@@ -36,8 +36,8 @@ document.addEventListener('DOMContentLoaded', function() {
     window.addEventListener('scroll', () => {
         const navbar = document.querySelector('.navbar');
         if (navbar) {
-            if (window. scrollY > 50) {
-                navbar. style.boxShadow = '0 4px 12px rgba(0, 0, 0, 0.15)';
+            if (window.scrollY > 50) {
+                navbar.style.boxShadow = '0 4px 12px rgba(0, 0, 0, 0.15)';
             } else {
                 navbar.style.boxShadow = '0 1px 3px rgba(0, 0, 0, 0.1)';
             }
@@ -45,14 +45,14 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Funcionalidad de expandir/colapsar paquetes
-    const packageHeaders = document.querySelectorAll('.package-header');
+    const packageHeaders = document.querySelectorAll('. package-header');
     
-    console.log('Paquetes encontrados:', packageHeaders.length); // Para debug
+    console.log('Paquetes encontrados:', packageHeaders.length);
     
     packageHeaders.forEach(header => {
-        header. addEventListener('click', function() {
+        header.addEventListener('click', function() {
             const packageCard = this.closest('.package-card');
-            const isActive = packageCard.classList. contains('active');
+            const isActive = packageCard.classList.contains('active');
             
             // Cerrar todos los paquetes
             document.querySelectorAll('.package-card').forEach(card => {
@@ -64,7 +64,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 packageCard.classList. add('active');
             }
             
-            console.log('Click en paquete:', this.querySelector('h3').textContent); // Para debug
+            console.log('Click en paquete:', this.querySelector('h3').textContent);
         });
     });
 
@@ -73,7 +73,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     if (contactForm) {
         contactForm.addEventListener('submit', (e) => {
-            e.preventDefault();
+            e. preventDefault();
             
             const name = document.getElementById('name').value;
             const email = document.getElementById('email').value;
@@ -81,8 +81,8 @@ document.addEventListener('DOMContentLoaded', function() {
             const message = document.getElementById('message').value;
             
             // Crear mensaje para WhatsApp
-            const whatsappMessage = `Hola, soy ${name}. ${message}. Mi email es ${email}${phone ? ` y mi teléfono es ${phone}` : ''}.`;
-            const whatsappURL = `https://wa.me/573007389527? text=${encodeURIComponent(whatsappMessage)}`;
+            const whatsappMessage = `Hola, soy ${name}. ${message}.  Mi email es ${email}${phone ? ` y mi teléfono es ${phone}` : ''}.`;
+            const whatsappURL = `https://wa.me/573007389527?text=${encodeURIComponent(whatsappMessage)}`;
             
             // Abrir WhatsApp
             window.open(whatsappURL, '_blank');
@@ -94,21 +94,21 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Animación de entrada para las tarjetas
     const observerOptions = {
-        threshold:  0.1,
+        threshold: 0.1,
         rootMargin: '0px 0px -50px 0px'
     };
 
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.style. opacity = '1';
-                entry.target.style.transform = 'translateY(0)';
+            if (entry. isIntersecting) {
+                entry.target.style.opacity = '1';
+                entry.target. style.transform = 'translateY(0)';
             }
         });
     }, observerOptions);
 
     // Observar todas las tarjetas
-    document.querySelectorAll('.service-card, .package-card, .feature').forEach(card => {
+    document. querySelectorAll('.service-card, .package-card, .feature').forEach(card => {
         card.style.opacity = '0';
         card.style.transform = 'translateY(20px)';
         card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
