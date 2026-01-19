@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const navbar = document.querySelector('.navbar');
         if (navbar) {
             if (window.scrollY > 50) {
-                navbar.style.boxShadow = '0 4px 12px rgba(0, 0, 0, 0.15)';
+                navbar.style. boxShadow = '0 4px 12px rgba(0, 0, 0, 0.15)';
             } else {
                 navbar.style.boxShadow = '0 1px 3px rgba(0, 0, 0, 0.1)';
             }
@@ -82,7 +82,7 @@ document.addEventListener('DOMContentLoaded', function() {
             
             // Crear mensaje para WhatsApp
             const whatsappMessage = `Hola, soy ${name}. ${message}.  Mi email es ${email}${phone ? ` y mi teléfono es ${phone}` : ''}.`;
-            const whatsappURL = `https://wa.me/573007389527?text=${encodeURIComponent(whatsappMessage)}`;
+            const whatsappURL = `https://wa.me/573007389527? text=${encodeURIComponent(whatsappMessage)}`;
             
             // Abrir WhatsApp
             window.open(whatsappURL, '_blank');
